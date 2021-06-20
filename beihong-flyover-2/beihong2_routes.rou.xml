@@ -1,0 +1,25 @@
+<routes>
+    <vType id="myType" vClass = "taxi" accei = "3" decel = "4.5" minGap = '1' 
+    sigma = "0.5" length = "4.5" callFollowMode="IDM" departSpeed = "1" maxSpeed="20" 
+    actionStepLength="0.1" tau="1.4" laneChangeModel="SL2015"/>
+
+    <flow id="a1" color="1,1,0" begin="0" end="7200" period="1" type="myType" departLane="1"  >
+      <route edges="A1 A H C1"/> 
+    </flow>
+
+    <flow id="a1_1" color="1,1,1" begin="0" end="7200" vehsPerHour="3000" type="myType"  >
+      <route edges="A1 A H C2"/> 
+    </flow>
+
+    <flow id="a2" color="1,0,0" begin="0" end="7200" vehsPerHour="2000" type="myType"  >
+        <route edges="A2 A H C1"/>
+    </flow>
+
+    <flow id="b1" color="1,0,1" begin="0" end="3600" period="0.1" type="myType" >
+        <route edges="B H C1"/> 
+    </flow>
+    <flow id="b1_1" color="1,0,1" begin="0" end="3600" period="0.1" type="myType" >
+        <route edges="B H C2"/> 
+    </flow>
+
+</routes>

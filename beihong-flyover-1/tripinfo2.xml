@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 06/14/21 17:23:13 by Eclipse SUMO GUI Version 1.8.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="F:\software%20two\sumo-1.8.0/file3/beihong2.net.xml"/>
+        <route-files value="F:\software%20two\sumo-1.8.0/file3/beihong2_routes.rou.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="F:\software%20two\sumo-1.8.0/file2/tripinfo2.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="2000"/>
+    </time>
+
+    <report>
+        <verbose value="true"/>
+        <duration-log.statistics value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="52645"/>
+    </traci_server>
+
+    <gui_only>
+        <gui-settings-file value="F:\software%20two\sumo-1.8.0/file3/gui-settings.cfg"/>
+        <quit-on-end value="true"/>
+        <start value="true"/>
+    </gui_only>
+
+</configuration>
+-->
+
+<tripinfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tripinfo_file.xsd">
+</tripinfos>

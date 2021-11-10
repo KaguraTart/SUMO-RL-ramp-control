@@ -25,7 +25,7 @@ import xml2csv
 #绘图图式
 plt.rcParams['figure.figsize']=(30,10)
 plt.style.use('ggplot')
-gui = False
+gui = True
 if gui == True: 
     sumoBinary = r"F:\software two\sumo-1.8.0\bin/sumo-gui"
 else:

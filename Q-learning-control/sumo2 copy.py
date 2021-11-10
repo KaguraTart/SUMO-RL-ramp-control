@@ -7,33 +7,32 @@ import math
 from dateutil.relativedelta import relativedelta
 from datetime import datetime, date
 import os, sys
-import  time#绘图图式
-plt.rcParams['figure.figsize']=(30,10)
-plt.style.use('ggplot')
-from sumolib import checkBinary
-# import xml2csv
-
-
-'''
-traci提供实时交互接口
-'''
+import  time
 if 'SUMO_HOME' in os.environ:
      tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
      sys.path.append(tools)
 else:
      sys.exit("please declare environment variable 'SUMO_HOME'")
+
+'''
+traci提供实时交互接口
+'''
+
 sys.path.append(r"F:/software two/sumo-1.8.0/tools/xml")
 import traci
-
+from sumolib import checkBinary
+import xml2csv
+#绘图图式
+plt.rcParams['figure.figsize']=(30,10)
+plt.style.use('ggplot')
 gui = True
 if gui == True: 
     sumoBinary = r"F:\software two\sumo-1.8.0\bin/sumo-gui"
 else:
     sumoBinary = r"F:\software two\sumo-1.8.0\bin/sumo"
-sumoCmd = [sumoBinary, "-c", 
-        r"F:\software two\sumo-1.8.0/file1/test1.sumo.cfg",'--tripinfo-output',
-        r'F:\software two\sumo-1.8.0/file1/tripinfo2.xml','--duration-log.statistics']
+sumoCmd = [sumoBinary, "-c", r"F:\software two\sumo-1.8.0/file1/test1.sumo.cfg",'--tripinfo-output',r'F:\software two\sumo-1.8.0/file1/tripinfo2.xml','--duration-log.statistics']
 
+np.random.seed(2)  # reproducible
 #全局变量
 simulation_time =1200
 H_0_meanspeed_list =[]
@@ -53,6 +52,52 @@ H_2_car_speed = 0
 H_3_car_speed = 0
 H_4_car_speed = 0
 Actions_move =['r','G']
+N_STATES = simulation_time   # the length of the 1 dimensional world
+ACTIONS = ['r', 'G']     # available actions
+EPSILON = 0.9   # greedy police
+ALPHA = 0.1     # learning rate
+GAMMA = 0.9    # discount factor
+MAX_EPISODES = 300   # maximum episodes训练次数
+FRESH_TIME = 0.0003    # fresh time for one move
+
+#RL----Q-learning
+def build_q_table(n_states, actions):
+    table = pd.DataFrame(
+        np.zeros((n_states, len(actions))),     # q_table initial values
+        columns=actions,    # actions's name
+    )
+    # print(table)    # show table
+    return table
+def choose_action(state, q_table):
+    # This is how to choose an action
+    state_actions = q_table.iloc[state, :]
+    if (np.random.uniform() > EPSILON) or ((state_actions == 0).all()):  # act non-greedy or state-action have no value
+        action_name = np.random.choice(ACTIONS)
+    else:   # act greedy
+        action_name = state_actions.idxmax()    # replace argmax to idxmax as argmax means a different function in newer version of pandas
+    return action_name
+
+def get_env_feedback(S,A,meanspeed):
+    # This is how agent will interact with the environment
+    if meanspeed >30 and A=='G':
+        R=1
+        S_ = S
+    else:
+        R=0.1
+        S_ = S
+    return S_, R
+def rl():
+    # main part of RL loop
+    q_table = build_q_table(N_STATES, ACTIONS)
+    for episode in range(MAX_EPISODES):
+        q_table_train = traci_control(N_STATES,q_table)
+        q_table_train.to_excel(r'F:\software two\sumo-1.8.0/file1/doc/'+'qtable'+str(episode)+'.xlsx',index=False)
+        episode +=1
+    
+    return q_table
+#RL----Q-learning---------------------------------
+
+#-----control-----------------------------
 def build_qq_table(step, actions):
     table = pd.DataFrame(
         np.zeros((step, len(actions))),   # q_table initial values
@@ -83,12 +128,8 @@ def trafficlight_control2(time):
         qq_table.iloc[time,1] = 1
     return ramp
 
-T1 = 'Lane car mean speed for limit speed '
-T2 = 'car mean speed of H_1 and H_2 for limit speed '
-T3 = 'Lane car OCC for limit speed'
-T4 = 'Lane car OCC_mean for limit speed'
 
-control_way = 'g'
+#------plot------------------------------------
 def print_lane_speed():#输出0 1 道路的平均速度
     pass
 def output_lane_speed():   #输出01234道路的平均速度
@@ -116,22 +157,22 @@ def output_lane_speed():   #输出01234道路的平均速度
     car_simple_speed = {'H_0':car_simple1,'H_1':car_simple2,'H_2':car_simple3,'H_3':car_simple4,'H_4':car_simple5 }
     car_simple_speed = pd.DataFrame(data = car_simple_speed,index = car_index)
     ax = car_simple_speed[['H_0', 'H_1','H_2','H_3','H_4']].plot(fontsize =30)
-    plt.title(T1,fontsize = 30)
+    plt.title('Lane car mean speed for RL control ',fontsize = 30)
     fig = ax.get_figure()
     plt.xlabel('time /min',fontsize = 30)
     plt.ylabel('speed km/h',fontsize = 30)
     plt.show()
-    fig.savefig(r'F:\software two\sumo-1.8.0/file1/img3/'   + T1+'.png')
+    fig.savefig(r'F:\software two\sumo-1.8.0/file1/img2/'   + 'car_speed_lane_RL.png')
     
     car_mean_speed = {'H_1_2_mean':car_simple_1_2_mean}
     car_mean_speed = pd.DataFrame(data = car_mean_speed,index = car_index)
     ax= car_mean_speed[['H_1_2_mean']].plot(fontsize =30)
-    plt.title(T2,fontsize = 30)
+    plt.title('car mean speed of H_1 and H_2 for RL control',fontsize = 25)
     fig = ax.get_figure()
     plt.xlabel('time /min',fontsize = 30)
     plt.ylabel('speed km/h',fontsize = 30)
     plt.show()
-    fig.savefig(r'F:\software two\sumo-1.8.0/file1/img3/'   + T2+'.png')
+    fig.savefig(r'F:\software two\sumo-1.8.0/file1/img2/'   + 'car_mean_speed12_RL.png')
 
 def output_lane_OOC(): #画图
     get_OOC = {'H_0':get_OOC0_list,
@@ -157,81 +198,35 @@ def output_lane_OOC(): #画图
     car_simple_OOC = {'H_0':car_OOC_simple1,'H_1':car_OOC_simple2,'H_2':car_OOC_simple3,'H_3':car_OOC_simple4,'H_4':car_OOC_simple5 ,'H_all':car_OOC_simpleall}
     car_simple_OOC = pd.DataFrame(data = car_simple_OOC,index = car_OOC_index)
     ax = car_simple_OOC[['H_0', 'H_1','H_2','H_3','H_4']].plot(fontsize =30)
-    plt.title(T3,fontsize = 30)
+    plt.title('Lane car OCC for RL control',fontsize = 30)
     fig = ax.get_figure()
     plt.xlabel('time /min',fontsize = 30)
     plt.ylabel('%',fontsize = 30)
     plt.show()
-    fig.savefig(r'F:\software two\sumo-1.8.0/file1/img3/'   +T3+ '.png')
+    fig.savefig(r'F:\software two\sumo-1.8.0/file1/img2/'   + 'OCC_RL.png')
 
     ax = car_simple_OOC[['H_all']].plot(fontsize =30)
-    plt.title(T4,fontsize = 30)
+    plt.title('Lane car OCC_mean for RL control ',fontsize = 30)
     fig = ax.get_figure()
     plt.xlabel('time /min',fontsize = 30)
     plt.ylabel('%',fontsize = 30)
     plt.show()
-    fig.savefig(r'F:\software two\sumo-1.8.0/file1/img3/'   + T4+'.png')
+    fig.savefig(r'F:\software two\sumo-1.8.0/file1/img2/'   + 'OCCmean_RL.png')
 
 #traci控制
-def traci_control(step_time):
-    for i in range(0,5):
-        traci.lane.setMaxSpeed('H_'+str(i),27.78)
-    traci.lane.setMaxSpeed('C1_0',8)
-    traci.lane.setMaxSpeed('C1_1',8)
-    # traci.lane.setMaxSpeed('H_2',15)
-    # traci.lane.setMaxSpeed('H_3',15)
-    # traci.lane.setMaxSpeed('H_4',15)
+def traci_control_env_update(step_time,q_table):
+    traci.start(sumoCmd)
+
     for step in range(0,step_time):
-        
-        H_0_meanspeed_list.append(traci.lane.getLastStepMeanSpeed('H_0')*3.6)
-        H_1_meanspeed_list.append(traci.lane.getLastStepMeanSpeed('H_1')*3.6)
-        H_2_meanspeed_list.append(traci.lane.getLastStepMeanSpeed('H_2')*3.6)
-        H_3_meanspeed_list.append(traci.lane.getLastStepMeanSpeed('H_3')*3.6)
-        H_4_meanspeed_list.append(traci.lane.getLastStepMeanSpeed('H_4')*3.6)
-        get_OOC0_list.append(traci.lane.getLastStepOccupancy('H_0')*100)
-        get_OOC1_list.append(traci.lane.getLastStepOccupancy('H_1')*100)
-        get_OOC2_list.append(traci.lane.getLastStepOccupancy('H_2')*100)
-        get_OOC3_list.append(traci.lane.getLastStepOccupancy('H_3')*100)
-        get_OOC4_list.append(traci.lane.getLastStepOccupancy('H_4')*100)
-        get_OOCall_list.append((traci.lane.getLastStepOccupancy('H_0')+traci.lane.getLastStepOccupancy('H_1')+
-        traci.lane.getLastStepOccupancy('H_2')+traci.lane.getLastStepOccupancy('H_3')+traci.lane.getLastStepOccupancy('H_4'))/4*100)
-
-        #仿真延迟
-        # time.sleep(/0.1)
-
-        #交通信号灯控制
-        traci.trafficlight.setRedYellowGreenState(traci.trafficlight.getIDList()[0], 'g'+'G')  #trafficlight_control(step)  trafficlight_control2(step)
 
         #步长控制
         traci.simulationStep(step +1)
 
-        # simulation_current_time = traci.simulation.getTime()
-
-        #目前时间
-        # print('simulation time is:',simulation_current_time)
-
         #获取车辆ID
         all_vehicle_id = traci.vehicle.getIDList()
-        #获取车辆位置
-        # all_vehicle_position = traci.vehicle.getPosition(step)
-        #获取车辆是否经过车线
-
-        try :# 获取截屏方法
-            pass
-            # 获取截屏
-            # traci.gui.screenshot('View #0',r'F:\software two\sumo-1.8.0/file1/img/img{}.jpg'.format(step),-1,-1)
-            # try:
-            #     if traci.inductionloop.getLastStepVehicleNumber() > 0:
-            #         traci.trafficlight.setRedYellowGreenState("0", "GGGGG")
-            # except:
-            #     traci.close()
-            #     break
-        except :
-            pass
-
-
         # print(H_0_meanspeed)
     traci.close(wait=True)
+    return 0
 
 
 
@@ -252,15 +247,31 @@ lane_ID = traci.lane.getIDList()
 
 if __name__ == "__main__":
  #运行sumo
-    traci.start(sumoCmd)
-    # traci.gui.setSchema('View #0','cus')  #改变GUI为真实车辆
-
-    traci_control(simulation_time)
     
-    output_lane_speed()
-    output_lane_OOC()
-    print(qq_table)
-    qq_table.to_excel(r'F:\software two\sumo-1.8.0/file1/img/'+'qqtable.xlsx',index=False)
+    # traci.gui.setSchema('View #0','cus')  #改变GUI为真实车辆
+    q_table = build_q_table(N_STATES, ACTIONS)
+    for episode in tqdm(range(MAX_EPISODES)):
+        H_0_meanspeed_list =[]
+        H_1_meanspeed_list =[]
+        H_2_meanspeed_list =[]
+        H_3_meanspeed_list =[]
+        H_4_meanspeed_list =[]
+        get_OOC0_list = []
+        get_OOC1_list = []
+        get_OOC2_list = []
+        get_OOC3_list = []
+        get_OOC4_list = []
+        get_OOCall_list = []
+        q_table_train = traci_control_env_update(N_STATES,q_table)
+        if episode % 20 == 0:
+            q_table_train.to_excel(r'F:\software two\sumo-1.8.0/file1/doc2/'+'qtable'+str(episode)+'.xlsx',index=False)
+        episode +=1
+    # output_lane_speed()
+    # output_lane_OOC()
+        print('------------------------------------------------')
+
+
+
 
     # ax= qq_table[['r']].plot(fontsize =30)
     # plt.title('qq_table ',fontsize = 30)

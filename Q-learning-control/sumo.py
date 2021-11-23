@@ -9,7 +9,7 @@ from datetime import datetime, date
 import os, sys
 import  time#绘图图式
 plt.rcParams['figure.figsize']=(30,10)
-plt.style.use('ggplot')
+# plt.style.use('ggplot')
 from sumolib import checkBinary
 # import xml2csv
 
@@ -25,7 +25,7 @@ else:
 sys.path.append(r"F:/software two/sumo-1.8.0/tools/xml")
 import traci
 
-gui = True
+gui = False
 if gui == True: 
     sumoBinary = r"F:\software two\sumo-1.8.0\bin/sumo-gui"
 else:
@@ -120,6 +120,7 @@ def output_lane_speed():   #输出01234道路的平均速度
     fig = ax.get_figure()
     plt.xlabel('time /min',fontsize = 30)
     plt.ylabel('speed km/h',fontsize = 30)
+    plt.legend(fontsize = 20)
     plt.show()
     fig.savefig(r'F:\software two\sumo-1.8.0/file1/img3/'   + T1+'.png')
     
@@ -130,6 +131,7 @@ def output_lane_speed():   #输出01234道路的平均速度
     fig = ax.get_figure()
     plt.xlabel('time /min',fontsize = 30)
     plt.ylabel('speed km/h',fontsize = 30)
+    plt.legend(fontsize = 20)
     plt.show()
     fig.savefig(r'F:\software two\sumo-1.8.0/file1/img3/'   + T2+'.png')
 
@@ -161,6 +163,7 @@ def output_lane_OOC(): #画图
     fig = ax.get_figure()
     plt.xlabel('time /min',fontsize = 30)
     plt.ylabel('%',fontsize = 30)
+    plt.legend(fontsize = 20)
     plt.show()
     fig.savefig(r'F:\software two\sumo-1.8.0/file1/img3/'   +T3+ '.png')
 
@@ -169,6 +172,7 @@ def output_lane_OOC(): #画图
     fig = ax.get_figure()
     plt.xlabel('time /min',fontsize = 30)
     plt.ylabel('%',fontsize = 30)
+    plt.legend(fontsize = 20)
     plt.show()
     fig.savefig(r'F:\software two\sumo-1.8.0/file1/img3/'   + T4+'.png')
 

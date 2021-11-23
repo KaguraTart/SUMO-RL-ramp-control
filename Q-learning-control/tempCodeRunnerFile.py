@@ -1,2 +1,3 @@
-plt.rcParams['figure.figsize']=(30,10)
-# plt.style.use('ggplot')
+    # colors = ['pink', 'lightblue', 'lightgreen','red']
+    # for patch, color in zip(bplot1['boxes'], colors):
+    #     patch.set_facecolor(color)

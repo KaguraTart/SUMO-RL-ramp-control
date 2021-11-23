@@ -1,0 +1,411 @@
+{
+	"SettingsVersion": 1.2,
+	"SimMode": "Car",
+
+	"Vehicles":{
+	"Car1":{
+		"VehicleType": "PhysXCar",
+		"X":-3, "Y": 7,"Z": -0.2
+			},
+	"Car2":{
+		"VehicleType": "PhysXCar",
+		"X":-6, "Y": 10,"Z": -0.2
+			},
+	"Car3":{
+		"VehicleType": "PhysXCar",
+		"X":-9, "Y": 13,"Z": -0.2
+			},
+	"Car4":{
+		"VehicleType": "PhysXCar",
+		"X":-12, "Y": 16,"Z": -0.2
+			},
+	"Car5":{
+		"VehicleType": "PhysXCar",
+		"X":-15, "Y": 19,"Z": -0.2
+			},
+	"Car6":{
+		"VehicleType": "PhysXCar",
+		"X":-18, "Y": 22,"Z": -0.2
+			},
+	"Car7":{
+		"VehicleType": "PhysXCar",
+		"X":-21, "Y": 25,"Z": -0.2
+			},
+	"Car8":{
+		"VehicleType": "PhysXCar",
+		"X":-24, "Y": 28,"Z": -0.2
+			},
+	"Car9":{
+		"VehicleType": "PhysXCar",
+		"X":-27, "Y": 31,"Z": -0.2
+			},
+	"Car10":{
+		"VehicleType": "PhysXCar",
+		"X":-30, "Y": 34,"Z": -0.2
+			},
+	"Car11":{
+		"VehicleType": "PhysXCar",
+		"X":-33, "Y": 37,"Z": -0.2
+			},
+	"Car12":{
+		"VehicleType": "PhysXCar",
+		"X":-36, "Y": 40,"Z": -0.2
+			},
+	"Car13":{
+		"VehicleType": "PhysXCar",
+		"X":-39, "Y": 43,"Z": -0.2
+			},
+	"Car14":{
+		"VehicleType": "PhysXCar",
+		"X":-42, "Y": 46,"Z": -0.2
+			},
+	"Car15":{
+		"VehicleType": "PhysXCar",
+		"X":-45, "Y": 49,"Z": -0.2
+			},
+	"Car16":{
+		"VehicleType": "PhysXCar",
+		"X":-48, "Y": 52,"Z": -0.2
+			},
+	"Car17":{
+		"VehicleType": "PhysXCar",
+		"X":-51, "Y": 55,"Z": -0.2
+			},
+	"Car18":{
+		"VehicleType": "PhysXCar",
+		"X":-54, "Y": 58,"Z": -0.2
+			},
+	"Car19":{
+		"VehicleType": "PhysXCar",
+		"X":-57, "Y": 61,"Z": -0.2
+			},
+	"Car20":{
+		"VehicleType": "PhysXCar",
+		"X":-60, "Y": 64,"Z": -0.2
+			},
+	"Car21":{
+		"VehicleType": "PhysXCar",
+		"X":-63, "Y": 67,"Z": -0.2
+			},
+	"Car22":{
+		"VehicleType": "PhysXCar",
+		"X":-66, "Y": 70,"Z": -0.2
+			},
+	"Car23":{
+		"VehicleType": "PhysXCar",
+		"X":-69, "Y": 73,"Z": -0.2
+			},
+	"Car24":{
+		"VehicleType": "PhysXCar",
+		"X":-72, "Y": 76,"Z": -0.2
+			},
+	"Car25":{
+		"VehicleType": "PhysXCar",
+		"X":-75, "Y": 79,"Z": -0.2
+			},
+	"Car26":{
+		"VehicleType": "PhysXCar",
+		"X":-78, "Y": 82,"Z": -0.2
+			},
+	"Car27":{
+		"VehicleType": "PhysXCar",
+		"X":-81, "Y": 85,"Z": -0.2
+			},
+	"Car28":{
+		"VehicleType": "PhysXCar",
+		"X":-84, "Y": 88,"Z": -0.2
+			},
+	"Car29":{
+		"VehicleType": "PhysXCar",
+		"X":-87, "Y": 91,"Z": -0.2
+			},
+	"Car30":{
+		"VehicleType": "PhysXCar",
+		"X":-90, "Y": 94,"Z": -0.2
+			},
+	"Car31":{
+		"VehicleType": "PhysXCar",
+		"X":-93, "Y": 97,"Z": -0.2
+			},
+	"Car32":{
+		"VehicleType": "PhysXCar",
+		"X":-96, "Y": 100,"Z": -0.2
+			},
+	"Car33":{
+		"VehicleType": "PhysXCar",
+		"X":-99, "Y": 103,"Z": -0.2
+			},
+	"Car34":{
+		"VehicleType": "PhysXCar",
+		"X":-102, "Y": 106,"Z": -0.2
+			},
+	"Car35":{
+		"VehicleType": "PhysXCar",
+		"X":-105, "Y": 109,"Z": -0.2
+			},
+	"Car36":{
+		"VehicleType": "PhysXCar",
+		"X":-108, "Y": 112,"Z": -0.2
+			},
+	"Car37":{
+		"VehicleType": "PhysXCar",
+		"X":-111, "Y": 115,"Z": -0.2
+			},
+	"Car38":{
+		"VehicleType": "PhysXCar",
+		"X":-114, "Y": 118,"Z": -0.2
+			},
+	"Car39":{
+		"VehicleType": "PhysXCar",
+		"X":-117, "Y": 121,"Z": -0.2
+			},
+	"Car40":{
+		"VehicleType": "PhysXCar",
+		"X":-120, "Y": 124,"Z": -0.2
+			},
+	"Car41":{
+		"VehicleType": "PhysXCar",
+		"X":-123, "Y": 127,"Z": -0.2
+			},
+	"Car42":{
+		"VehicleType": "PhysXCar",
+		"X":-126, "Y": 130,"Z": -0.2
+			},
+	"Car43":{
+		"VehicleType": "PhysXCar",
+		"X":-129, "Y": 133,"Z": -0.2
+			},
+	"Car44":{
+		"VehicleType": "PhysXCar",
+		"X":-132, "Y": 136,"Z": -0.2
+			},
+	"Car45":{
+		"VehicleType": "PhysXCar",
+		"X":-135, "Y": 139,"Z": -0.2
+			},
+	"Car46":{
+		"VehicleType": "PhysXCar",
+		"X":-138, "Y": 142,"Z": -0.2
+			},
+	"Car47":{
+		"VehicleType": "PhysXCar",
+		"X":-141, "Y": 145,"Z": -0.2
+			},
+	"Car48":{
+		"VehicleType": "PhysXCar",
+		"X":-144, "Y": 148,"Z": -0.2
+			},
+	"Car49":{
+		"VehicleType": "PhysXCar",
+		"X":-147, "Y": 151,"Z": -0.2
+			},
+	"Car50":{
+		"VehicleType": "PhysXCar",
+		"X":-150, "Y": 154,"Z": -0.2
+			},
+	"Car51":{
+		"VehicleType": "PhysXCar",
+		"X":-153, "Y": 157,"Z": -0.2
+			},
+	"Car52":{
+		"VehicleType": "PhysXCar",
+		"X":-156, "Y": 160,"Z": -0.2
+			},
+	"Car53":{
+		"VehicleType": "PhysXCar",
+		"X":-159, "Y": 163,"Z": -0.2
+			},
+	"Car54":{
+		"VehicleType": "PhysXCar",
+		"X":-162, "Y": 166,"Z": -0.2
+			},
+	"Car55":{
+		"VehicleType": "PhysXCar",
+		"X":-165, "Y": 169,"Z": -0.2
+			},
+	"Car56":{
+		"VehicleType": "PhysXCar",
+		"X":-168, "Y": 172,"Z": -0.2
+			},
+	"Car57":{
+		"VehicleType": "PhysXCar",
+		"X":-171, "Y": 175,"Z": -0.2
+			},
+	"Car58":{
+		"VehicleType": "PhysXCar",
+		"X":-174, "Y": 178,"Z": -0.2
+			},
+	"Car59":{
+		"VehicleType": "PhysXCar",
+		"X":-177, "Y": 181,"Z": -0.2
+			},
+	"Car60":{
+		"VehicleType": "PhysXCar",
+		"X":-180, "Y": 184,"Z": -0.2
+			},
+	"Car61":{
+		"VehicleType": "PhysXCar",
+		"X":-183, "Y": 187,"Z": -0.2
+			},
+	"Car62":{
+		"VehicleType": "PhysXCar",
+		"X":-186, "Y": 190,"Z": -0.2
+			},
+	"Car63":{
+		"VehicleType": "PhysXCar",
+		"X":-189, "Y": 193,"Z": -0.2
+			},
+	"Car64":{
+		"VehicleType": "PhysXCar",
+		"X":-192, "Y": 196,"Z": -0.2
+			},
+	"Car65":{
+		"VehicleType": "PhysXCar",
+		"X":-195, "Y": 199,"Z": -0.2
+			},
+	"Car66":{
+		"VehicleType": "PhysXCar",
+		"X":-198, "Y": 202,"Z": -0.2
+			},
+	"Car67":{
+		"VehicleType": "PhysXCar",
+		"X":-201, "Y": 205,"Z": -0.2
+			},
+	"Car68":{
+		"VehicleType": "PhysXCar",
+		"X":-204, "Y": 208,"Z": -0.2
+			},
+	"Car69":{
+		"VehicleType": "PhysXCar",
+		"X":-207, "Y": 211,"Z": -0.2
+			},
+	"Car70":{
+		"VehicleType": "PhysXCar",
+		"X":-210, "Y": 214,"Z": -0.2
+			},
+	"Car71":{
+		"VehicleType": "PhysXCar",
+		"X":-213, "Y": 217,"Z": -0.2
+			},
+	"Car72":{
+		"VehicleType": "PhysXCar",
+		"X":-216, "Y": 220,"Z": -0.2
+			},
+	"Car73":{
+		"VehicleType": "PhysXCar",
+		"X":-219, "Y": 223,"Z": -0.2
+			},
+	"Car74":{
+		"VehicleType": "PhysXCar",
+		"X":-222, "Y": 226,"Z": -0.2
+			},
+	"Car75":{
+		"VehicleType": "PhysXCar",
+		"X":-225, "Y": 229,"Z": -0.2
+			},
+	"Car76":{
+		"VehicleType": "PhysXCar",
+		"X":-228, "Y": 232,"Z": -0.2
+			},
+	"Car77":{
+		"VehicleType": "PhysXCar",
+		"X":-231, "Y": 235,"Z": -0.2
+			},
+	"Car78":{
+		"VehicleType": "PhysXCar",
+		"X":-234, "Y": 238,"Z": -0.2
+			},
+	"Car79":{
+		"VehicleType": "PhysXCar",
+		"X":-237, "Y": 241,"Z": -0.2
+			},
+	"Car80":{
+		"VehicleType": "PhysXCar",
+		"X":-240, "Y": 244,"Z": -0.2
+			},
+	"Car81":{
+		"VehicleType": "PhysXCar",
+		"X":-243, "Y": 247,"Z": -0.2
+			},
+	"Car82":{
+		"VehicleType": "PhysXCar",
+		"X":-246, "Y": 250,"Z": -0.2
+			},
+	"Car83":{
+		"VehicleType": "PhysXCar",
+		"X":-249, "Y": 253,"Z": -0.2
+			},
+	"Car84":{
+		"VehicleType": "PhysXCar",
+		"X":-252, "Y": 256,"Z": -0.2
+			},
+	"Car85":{
+		"VehicleType": "PhysXCar",
+		"X":-255, "Y": 259,"Z": -0.2
+			},
+	"Car86":{
+		"VehicleType": "PhysXCar",
+		"X":-258, "Y": 262,"Z": -0.2
+			},
+	"Car87":{
+		"VehicleType": "PhysXCar",
+		"X":-261, "Y": 265,"Z": -0.2
+			},
+	"Car88":{
+		"VehicleType": "PhysXCar",
+		"X":-264, "Y": 268,"Z": -0.2
+			},
+	"Car89":{
+		"VehicleType": "PhysXCar",
+		"X":-267, "Y": 271,"Z": -0.2
+			},
+	"Car90":{
+		"VehicleType": "PhysXCar",
+		"X":-270, "Y": 274,"Z": -0.2
+			},
+	"Car91":{
+		"VehicleType": "PhysXCar",
+		"X":-273, "Y": 277,"Z": -0.2
+			},
+	"Car92":{
+		"VehicleType": "PhysXCar",
+		"X":-276, "Y": 280,"Z": -0.2
+			},
+	"Car93":{
+		"VehicleType": "PhysXCar",
+		"X":-279, "Y": 283,"Z": -0.2
+			},
+	"Car94":{
+		"VehicleType": "PhysXCar",
+		"X":-282, "Y": 286,"Z": -0.2
+			},
+	"Car95":{
+		"VehicleType": "PhysXCar",
+		"X":-285, "Y": 289,"Z": -0.2
+			},
+	"Car96":{
+		"VehicleType": "PhysXCar",
+		"X":-288, "Y": 292,"Z": -0.2
+			},
+	"Car97":{
+		"VehicleType": "PhysXCar",
+		"X":-291, "Y": 295,"Z": -0.2
+			},
+	"Car98":{
+		"VehicleType": "PhysXCar",
+		"X":-294, "Y": 298,"Z": -0.2
+			},
+	"Car99":{
+		"VehicleType": "PhysXCar",
+		"X":-297, "Y": 301,"Z": -0.2
+			},
+	"Car100":{
+		"VehicleType": "PhysXCar",
+		"X":-300, "Y": 304,"Z": -0.2
+			},
+		"Car500":{
+		"VehiclecType": "PhysXCar",
+		"X":-1500, "Y": 1504,"Z": -0.2
+			}
+		}
+}

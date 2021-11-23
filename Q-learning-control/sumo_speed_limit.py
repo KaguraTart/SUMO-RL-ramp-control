@@ -125,6 +125,18 @@ def output_lane_speed():   #输出01234道路的平均速度
     plt.show()
     fig.savefig(r'F:/大学/MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control/Q-learning-control/img/'   + T1+'.png')
     
+    bplot1 = car_simple_speed[['H_0', 'H_1','H_2','H_3','H_4']].boxplot(fontsize=30)
+    
+    # colors = ['pink', 'lightblue', 'lightgreen','red']
+    # for patch, color in zip(bplot1['boxes'], colors):
+    #     patch.set_facecolor(color)
+    plt.grid(True)
+    plt.xlabel('Lane name',fontsize = 30)
+    plt.ylabel('speed distribution(km/h)',fontsize = 30)
+    plt.title('the Lanes speed box plots for limit speed',fontsize = 35)
+    plt.show()
+    fig.savefig(r'F:/大学/MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control/Q-learning-control/img/'   + T1+'_box.png')
+    
     car_mean_speed = {'H_1_2_mean':car_simple_1_2_mean}
     car_mean_speed = pd.DataFrame(data = car_mean_speed,index = car_index)
     ax= car_mean_speed[['H_1_2_mean']].plot(fontsize =30)
@@ -169,6 +181,19 @@ def output_lane_OOC(): #画图
     plt.legend(fontsize = 20)
     plt.show()
     fig.savefig(r'F:/大学/MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control/Q-learning-control/img/'   +T3+ '.png')
+    
+    
+    
+    
+    
+    
+    boxpl2= car_simple_OOC[['H_0', 'H_1','H_2','H_3','H_4']].boxplot()
+    plt.grid(True)
+    plt.xlabel('Lane name',fontsize = 30)
+    plt.ylabel('speed distribution(km/h)',fontsize = 30)
+    plt.title('the Lanes OCC box plots for limit speed',fontsize = 35)
+    plt.show()
+    fig.savefig(r'F:/大学/MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control/Q-learning-control/img/'   + T3+'_box.png')
 
     ax = car_simple_OOC[['H_all']].plot(fontsize =30)
     plt.title(T4,fontsize = 30)

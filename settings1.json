@@ -1,0 +1,206 @@
+{
+"SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/master/docs/settings.md",
+"SettingsVersion": 1.2,"SimMode": "Car",
+"Vehicles":{
+"Car1":{
+"VehiclecType": "PhysXCar",
+"X":-20, "Y": 24,"Z": -0.2
+},
+"Car2":{
+"VehiclecType": "PhysXCar",
+"X":-40, "Y": 44,"Z": -0.2
+},
+"Car3":{
+"VehiclecType": "PhysXCar",
+"X":-60, "Y": 64,"Z": -0.2
+},
+"Car4":{
+"VehiclecType": "PhysXCar",
+"X":-80, "Y": 84,"Z": -0.2
+},
+"Car5":{
+"VehiclecType": "PhysXCar",
+"X":-100, "Y": 104,"Z": -0.2
+},
+"Car6":{
+"VehiclecType": "PhysXCar",
+"X":-120, "Y": 124,"Z": -0.2
+},
+"Car7":{
+"VehiclecType": "PhysXCar",
+"X":-140, "Y": 144,"Z": -0.2
+},
+"Car8":{
+"VehiclecType": "PhysXCar",
+"X":-160, "Y": 164,"Z": -0.2
+},
+"Car9":{
+"VehiclecType": "PhysXCar",
+"X":-180, "Y": 184,"Z": -0.2
+},
+"Car10":{
+"VehiclecType": "PhysXCar",
+"X":-200, "Y": 204,"Z": -0.2
+},
+"Car11":{
+"VehiclecType": "PhysXCar",
+"X":-220, "Y": 224,"Z": -0.2
+},
+"Car12":{
+"VehiclecType": "PhysXCar",
+"X":-240, "Y": 244,"Z": -0.2
+},
+"Car13":{
+"VehiclecType": "PhysXCar",
+"X":-260, "Y": 264,"Z": -0.2
+},
+"Car14":{
+"VehiclecType": "PhysXCar",
+"X":-280, "Y": 284,"Z": -0.2
+},
+"Car15":{
+"VehiclecType": "PhysXCar",
+"X":-300, "Y": 304,"Z": -0.2
+},
+"Car16":{
+"VehiclecType": "PhysXCar",
+"X":-320, "Y": 324,"Z": -0.2
+},
+"Car17":{
+"VehiclecType": "PhysXCar",
+"X":-340, "Y": 344,"Z": -0.2
+},
+"Car18":{
+"VehiclecType": "PhysXCar",
+"X":-360, "Y": 364,"Z": -0.2
+},
+"Car19":{
+"VehiclecType": "PhysXCar",
+"X":-380, "Y": 384,"Z": -0.2
+},
+"Car20":{
+"VehiclecType": "PhysXCar",
+"X":-400, "Y": 404,"Z": -0.2
+},
+"Car21":{
+"VehiclecType": "PhysXCar",
+"X":-420, "Y": 424,"Z": -0.2
+},
+"Car22":{
+"VehiclecType": "PhysXCar",
+"X":-440, "Y": 444,"Z": -0.2
+},
+"Car23":{
+"VehiclecType": "PhysXCar",
+"X":-460, "Y": 464,"Z": -0.2
+},
+"Car24":{
+"VehiclecType": "PhysXCar",
+"X":-480, "Y": 484,"Z": -0.2
+},
+"Car25":{
+"VehiclecType": "PhysXCar",
+"X":-500, "Y": 504,"Z": -0.2
+},
+"Car26":{
+"VehiclecType": "PhysXCar",
+"X":-520, "Y": 524,"Z": -0.2
+},
+"Car27":{
+"VehiclecType": "PhysXCar",
+"X":-540, "Y": 544,"Z": -0.2
+},
+"Car28":{
+"VehiclecType": "PhysXCar",
+"X":-560, "Y": 564,"Z": -0.2
+},
+"Car29":{
+"VehiclecType": "PhysXCar",
+"X":-580, "Y": 584,"Z": -0.2
+},
+"Car30":{
+"VehiclecType": "PhysXCar",
+"X":-600, "Y": 604,"Z": -0.2
+},
+"Car31":{
+"VehiclecType": "PhysXCar",
+"X":-620, "Y": 624,"Z": -0.2
+},
+"Car32":{
+"VehiclecType": "PhysXCar",
+"X":-640, "Y": 644,"Z": -0.2
+},
+"Car33":{
+"VehiclecType": "PhysXCar",
+"X":-660, "Y": 664,"Z": -0.2
+},
+"Car34":{
+"VehiclecType": "PhysXCar",
+"X":-680, "Y": 684,"Z": -0.2
+},
+"Car35":{
+"VehiclecType": "PhysXCar",
+"X":-700, "Y": 704,"Z": -0.2
+},
+"Car36":{
+"VehiclecType": "PhysXCar",
+"X":-720, "Y": 724,"Z": -0.2
+},
+"Car37":{
+"VehiclecType": "PhysXCar",
+"X":-740, "Y": 744,"Z": -0.2
+},
+"Car38":{
+"VehiclecType": "PhysXCar",
+"X":-760, "Y": 764,"Z": -0.2
+},
+"Car39":{
+"VehiclecType": "PhysXCar",
+"X":-780, "Y": 784,"Z": -0.2
+},
+"Car40":{
+"VehiclecType": "PhysXCar",
+"X":-800, "Y": 804,"Z": -0.2
+},
+"Car41":{
+"VehiclecType": "PhysXCar",
+"X":-820, "Y": 824,"Z": -0.2
+},
+"Car42":{
+"VehiclecType": "PhysXCar",
+"X":-840, "Y": 844,"Z": -0.2
+},
+"Car43":{
+"VehiclecType": "PhysXCar",
+"X":-860, "Y": 864,"Z": -0.2
+},
+"Car44":{
+"VehiclecType": "PhysXCar",
+"X":-880, "Y": 884,"Z": -0.2
+},
+"Car45":{
+"VehiclecType": "PhysXCar",
+"X":-900, "Y": 904,"Z": -0.2
+},
+"Car46":{
+"VehiclecType": "PhysXCar",
+"X":-920, "Y": 924,"Z": -0.2
+},
+"Car47":{
+"VehiclecType": "PhysXCar",
+"X":-940, "Y": 944,"Z": -0.2
+},
+"Car48":{
+"VehiclecType": "PhysXCar",
+"X":-960, "Y": 964,"Z": -0.2
+},
+"Car49":{
+"VehiclecType": "PhysXCar",
+"X":-980, "Y": 984,"Z": -0.2
+},
+"Car50":{
+"VehiclecType": "PhysXCar",
+"X":-1000, "Y": 1004,"Z": -0.2
+}
+}
+}

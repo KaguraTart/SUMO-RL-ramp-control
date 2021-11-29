@@ -13,7 +13,7 @@ plt.rcParams['figure.figsize']=(30,10)
 from sumolib import checkBinary
 # import xml2csv
 
-
+0
 '''
 traci提供实时交互接口
 '''
@@ -31,7 +31,7 @@ if gui == True:
 else:
     sumoBinary = r"F:\software two\sumo-1.8.0\bin/sumo"
 sumoCmd = [sumoBinary, "-c", 
-        r"F:\software two\sumo-1.8.0/file1/test1.sumo.cfg",'--tripinfo-output',
+        r"F:/大学/MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control/Q-learning-control/test1.sumo.cfg",'--tripinfo-output',
         r'F:\software two\sumo-1.8.0/file1/tripinfo2.xml','--duration-log.statistics']
 
 #全局变量
@@ -229,7 +229,7 @@ def traci_control(step_time):
         traci.lane.getLastStepOccupancy('H_2')+traci.lane.getLastStepOccupancy('H_3')+traci.lane.getLastStepOccupancy('H_4'))/4*100)
 
         #仿真延迟
-        # time.sleep(/0.1)
+        time.sleep(0.2)
 
         #交通信号灯控制
         traci.trafficlight.setRedYellowGreenState(traci.trafficlight.getIDList()[0], 'g'+'G')  #trafficlight_control(step)  trafficlight_control2(step)
@@ -289,8 +289,8 @@ if __name__ == "__main__":
 
     traci_control(simulation_time)
     
-    # output_lane_speed()
-    # output_lane_OOC()
+    output_lane_speed()
+    output_lane_OOC()
     print(qq_table)
     qq_table.to_excel(r'F:\software two\sumo-1.8.0/file1/img/'+'qqtable.xlsx',index=False)
 

@@ -13,26 +13,38 @@ plt.rcParams['figure.figsize']=(30,10)
 from sumolib import checkBinary
 # import xml2csv
 
+#-----引入地址------
+sumo_path = "F:\\software two\\sumo-1.10.0"
+project_path =  "F:\大学\MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control\Q-learning-control"
+# cfg_path = "F:\sumo_pro/traci_main\main\zhangshijie.sumo.cfg"
+cfg_path = "Q-learning-control/test1.sumo.cfg"
+#----------------------------------------#
 
-'''
-traci提供实时交互接口
-'''
-if 'SUMO_HOME' in os.environ:
-     tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
-     sys.path.append(tools)
-else:
-     sys.exit("please declare environment variable 'SUMO_HOME'")
-sys.path.append(r"F:/software two/sumo-1.8.0/tools/xml")
+#---------------------#
+sys.path.append(sumo_path)
+sys.path.append(sumo_path+"tools")
+# sys.path.append(r"F:\software two\sumo-1.8.0\guangshen_pro")
+#引入地址导入模块
+sys.path.append(sumo_path+"/tools/xml")
 import traci
+from sumolib import checkBinary
 
+
+
+
+#是否打开gui True为打开 False为关闭
 gui = True
-if gui == True: 
-    sumoBinary = r"F:\software two\sumo-1.8.0\bin/sumo-gui"
+if gui == 1: 
+    sumoBinary = sumo_path+"/bin/sumo-gui"
 else:
-    sumoBinary = r"F:\software two\sumo-1.8.0\bin/sumo"
-sumoCmd = [sumoBinary, "-c", 
-        r"F:/大学/MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control/Q-learning-control/test1.sumo.cfg",'--tripinfo-output',
-        r'F:\software two\sumo-1.8.0/file1/tripinfo2.xml','--duration-log.statistics']
+    sumoBinary = sumo_path+"/bin/sumo"
+
+#-----配置文件cfg打开以及输出xml格式统计数据
+sumoCmd = [sumoBinary, "-c", cfg_path ,'--tripinfo-output',project_path+"/tripinfo2_TEST.xml",'--duration-log.statistics']
+
+
+
+
 
 #全局变量
 simulation_time =1200

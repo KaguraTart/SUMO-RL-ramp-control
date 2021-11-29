@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2021-11-24 17:30:11 by Eclipse SUMO netedit Version 1.10.0
+<!-- generated on 2021-11-29 19:32:39 by Eclipse SUMO netedit Version 1.10.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
@@ -46,15 +46,15 @@
         <lane id="C1_1" index="1" speed="13.89" length="53.06" shape="-80.45,-27.22 -32.13,-11.88"/>
     </edge>
     <edge id="C2" from="gneJ1" to="gneJ8" priority="-1">
-        <lane id="C2_0" index="0" speed="13.89" length="45.04" shape="114.88,-15.48 147.76,-37.03"/>
-        <lane id="C2_1" index="1" speed="13.89" length="45.04" shape="116.63,-12.81 149.51,-34.35"/>
+        <lane id="C2_0" index="0" speed="13.89" length="43.62" shape="114.88,-15.48 147.76,-37.03"/>
+        <lane id="C2_1" index="1" speed="13.89" length="43.62" shape="116.63,-12.81 149.51,-34.35"/>
     </edge>
-    <edge id="H" from="gneJ0" to="gneJ1" priority="-1" length="100.00">
-        <lane id="H_0" index="0" speed="33.00" length="100.00" shape="-27.75,-14.40 108.27,-14.40"/>
-        <lane id="H_1" index="1" speed="33.00" length="100.00" shape="-27.75,-11.20 108.27,-11.20"/>
-        <lane id="H_2" index="2" speed="33.00" length="100.00" shape="-27.75,-8.00 108.27,-8.00"/>
-        <lane id="H_3" index="3" speed="33.00" length="100.00" shape="-27.75,-4.80 108.27,-4.80"/>
-        <lane id="H_4" index="4" speed="33.00" length="100.00" shape="-27.75,-1.60 108.27,-1.60"/>
+    <edge id="H" from="gneJ0" to="gneJ1" priority="-1" spreadType="roadCenter" length="100.00">
+        <lane id="H_0" index="0" speed="33.00" length="100.00" shape="-27.75,-14.40 108.26,-14.40"/>
+        <lane id="H_1" index="1" speed="33.00" length="100.00" shape="-27.75,-11.20 108.23,-11.20"/>
+        <lane id="H_2" index="2" speed="33.00" length="100.00" shape="-27.75,-8.00 108.19,-8.00"/>
+        <lane id="H_3" index="3" speed="33.00" length="100.00" shape="-27.75,-4.80 108.15,-4.80"/>
+        <lane id="H_4" index="4" speed="33.00" length="100.00" shape="-27.75,-1.60 108.12,-1.60"/>
     </edge>
     <edge id="Z1" from="gneJ4" to="gneJ0" priority="-1">
         <lane id="Z1_0" index="0" speed="40.00" length="79.48" shape="-100.00,-8.00 -31.74,-8.00"/>
@@ -62,8 +62,8 @@
         <lane id="Z1_2" index="2" speed="40.00" length="79.48" shape="-100.00,-1.60 -31.74,-1.60"/>
     </edge>
     <edge id="Z2" from="gneJ1" to="gneJ7" priority="-1">
-        <lane id="Z2_0" index="0" speed="40.00" length="59.28" shape="111.27,-4.80 160.00,-4.80"/>
-        <lane id="Z2_1" index="1" speed="40.00" length="59.28" shape="111.27,-1.60 160.00,-1.60"/>
+        <lane id="Z2_0" index="0" speed="40.00" length="62.97" shape="118.34,-4.80 160.00,-4.80"/>
+        <lane id="Z2_1" index="1" speed="40.00" length="62.97" shape="118.27,-1.60 160.00,-1.60"/>
     </edge>
 
     <tlLogic id="gneJ0" type="static" programID="0" offset="0">
@@ -73,19 +73,8 @@
         <phase duration="8"  state="rG"/>
     </tlLogic>
 
-    <junction id="gneJ0" type="traffic_light" x="0.00" y="0.00" incLanes="C1_0 C1_1 Z1_0 Z1_1 Z1_2" intLanes="" shape="-27.75,0.00 -27.75,-16.00 -28.86,-16.02 -29.24,-16.06 -29.62,-16.14 -30.08,-16.26 -30.68,-16.45 -32.62,-10.35 -31.46,-9.94 -31.21,-9.79 -31.17,-9.68 -31.35,-9.62 -31.74,-9.60 -31.74,0.00">
-        <request index="0" response="00000" foes="00000"/>
-        <request index="1" response="00000" foes="00000"/>
-        <request index="2" response="00000" foes="00000"/>
-        <request index="3" response="00000" foes="00000"/>
-        <request index="4" response="00000" foes="00000"/>
-    </junction>
-    <junction id="gneJ1" type="priority" x="100.00" y="0.00" incLanes="H_0 H_1 H_2 H_3 H_4" intLanes="" shape="111.27,0.00 111.27,-6.40 111.30,-6.96 112.08,-7.67 113.37,-8.65 115.18,-9.92 117.51,-11.47 114.00,-16.82 112.08,-15.90 111.31,-15.82 110.50,-15.86 109.53,-15.95 108.27,-16.00 108.27,0.00">
-        <request index="0" response="0000" foes="0000"/>
-        <request index="1" response="0000" foes="0000"/>
-        <request index="2" response="0000" foes="0000"/>
-        <request index="3" response="0000" foes="0000"/>
-    </junction>
+    <junction id="gneJ0" type="traffic_light_unregulated" x="0.00" y="0.00" incLanes="C1_0 C1_1 Z1_0 Z1_1 Z1_2" intLanes="" shape="-27.75,0.00 -27.75,-16.00 -28.86,-16.02 -29.24,-16.06 -29.62,-16.14 -30.08,-16.26 -30.68,-16.45 -32.62,-10.35 -31.46,-9.94 -31.21,-9.79 -31.17,-9.68 -31.35,-9.62 -31.74,-9.60 -31.74,0.00"/>
+    <junction id="gneJ1" type="unregulated" x="100.00" y="0.00" incLanes="H_0 H_1 H_2 H_3 H_4" intLanes="" shape="118.23,-0.04 118.38,-6.57 112.51,-9.81 117.51,-11.47 114.00,-16.82 112.08,-15.90 108.28,-16.04 108.10,0.00" customShape="1"/>
     <junction id="gneJ4" type="dead_end" x="-100.00" y="0.00" incLanes="" intLanes="" shape="-100.00,0.00 -100.00,-9.60"/>
     <junction id="gneJ6" type="dead_end" x="-80.93" y="-25.69" incLanes="" intLanes="" shape="-80.93,-25.69 -78.99,-31.79"/>
     <junction id="gneJ7" type="dead_end" x="160.00" y="0.00" incLanes="Z2_0 Z2_1" intLanes="" shape="160.00,-6.40 160.00,0.00"/>
@@ -96,7 +85,8 @@
     <connection from="H" to="C2" fromLane="0" toLane="0" dir="R" state="M"/>
     <connection from="H" to="C2" fromLane="1" toLane="1" dir="R" state="M"/>
     <connection from="H" to="Z2" fromLane="2" toLane="0" dir="s" state="M"/>
-    <connection from="H" to="Z2" fromLane="3" toLane="1" dir="s" state="M"/>
+    <connection from="H" to="Z2" fromLane="3" toLane="0" dir="s" state="M"/>
+    <connection from="H" to="Z2" fromLane="4" toLane="1" dir="s" state="M"/>
     <connection from="Z1" to="H" fromLane="0" toLane="2" tl="gneJ0" linkIndex="1" dir="s" state="O"/>
     <connection from="Z1" to="H" fromLane="1" toLane="3" tl="gneJ0" linkIndex="1" dir="s" state="O"/>
     <connection from="Z1" to="H" fromLane="2" toLane="4" tl="gneJ0" linkIndex="1" dir="s" state="O"/>

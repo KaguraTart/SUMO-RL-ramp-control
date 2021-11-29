@@ -238,10 +238,10 @@ def traci_control(step_time):
         get_OOC3_list.append(traci.lane.getLastStepOccupancy('H_3')*100)
         get_OOC4_list.append(traci.lane.getLastStepOccupancy('H_4')*100)
         get_OOCall_list.append((traci.lane.getLastStepOccupancy('H_0')+traci.lane.getLastStepOccupancy('H_1')+
-        traci.lane.getLastStepOccupancy('H_2')+traci.lane.getLastStepOccupancy('H_3')+traci.lane.getLastStepOccupancy('H_4'))/4*100)
-
+        traci.lane.getLastStepOccupancy('H_2')+traci.lane.getLastStepOccupancy('H_3')+traci.lane.getLastStepOccupancy('H_4'))/5*100)
+        print(traci.lane.getLastStepLength('Z1_0'))
         #仿真延迟
-        time.sleep(0.2)
+        # time.sleep(0.08)
 
         #交通信号灯控制
         traci.trafficlight.setRedYellowGreenState(traci.trafficlight.getIDList()[0], 'g'+'G')  #trafficlight_control(step)  trafficlight_control2(step)
@@ -301,7 +301,7 @@ if __name__ == "__main__":
 
     traci_control(simulation_time)
     
-    output_lane_speed()
+    # output_lane_speed()
     output_lane_OOC()
     print(qq_table)
     qq_table.to_excel(r'F:\software two\sumo-1.8.0/file1/img/'+'qqtable.xlsx',index=False)

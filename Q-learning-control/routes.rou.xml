@@ -1,6 +1,6 @@
 <routes>
     <vType id="myType" vClass = "taxi" accei = "0.4" decel = "4.5"
-    sigma = "0.5" length = "4.5" callFollowMode="ACC" departSpeed = "max" maxSpeed="20" 
+    sigma = "0.5" length = "4.5" callFollowMode="W-99" departSpeed = "max" maxSpeed="20" 
     actionStepLength="1" tau="1.4" laneChangeModel="SL2015"/>
 
     <flow id="a1" color="1,1,0" begin="0" end="7200" period="1" type="myType" departLane ='1' >

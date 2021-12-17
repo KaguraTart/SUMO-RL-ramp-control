@@ -229,7 +229,7 @@ def traci_control(step_time):
         traci.lane.getLastStepOccupancy('H_2')+traci.lane.getLastStepOccupancy('H_3')+traci.lane.getLastStepOccupancy('H_4'))/4*100)
 
         #仿真延迟
-        time.sleep(0.2)
+        # time.sleep(0.2)
 
         #交通信号灯控制
         traci.trafficlight.setRedYellowGreenState(traci.trafficlight.getIDList()[0], 'g'+'G')  #trafficlight_control(step)  trafficlight_control2(step)

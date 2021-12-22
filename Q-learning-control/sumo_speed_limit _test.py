@@ -190,7 +190,7 @@ def output_lane_OOC(): #画图
     fig = ax.get_figure()
     plt.xlabel('time /min',fontsize = 30)
     plt.ylabel('%',fontsize = 30)
-    plt.legend(fontsize = 20)
+    plt.legend(fontsize = 30)
     plt.show()
     fig.savefig(r'F:/大学/MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control/Q-learning-control/img/'   +T3+ '.png')
     

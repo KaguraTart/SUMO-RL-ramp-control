@@ -37,10 +37,11 @@ gui = True
 if gui == 1: 
     sumoBinary = sumo_path+"/bin/sumo-gui"
 else:
-。      sumoBinary = sumo_path+"/bin/sumo"
+      sumoBinary = sumo_path+"/bin/sumo"
 
 #-----配置文件cfg打开以及输出xml格式统计数据
 sumoCmd = [sumoBinary, "-c", cfg_path ,'--tripinfo-output',project_path+"/tripinfo2_TEST.xml",'--duration-log.statistics']
+
 
 
 

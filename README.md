@@ -6,3 +6,17 @@
 ## 运行
 - 上海南北高架洛川路到共和新路立交的强化学习demo请运行SUMO2.py
 - 更新了北虹立交的交织区信号控制与仿真模拟
+
+
+## 进一步研究 Further more research
+
+我们已经有了基于上述的进一步研究，如需了解，请参考下面的我们已经发表的论文。
+We have already conducted further research based on the above. To learn more, please refer to our published papers below.
+
+@article{deng2023automated,
+  title={Automated Traffic State Optimization in the Weaving Area of Urban Expressways by a Reinforcement Learning-Based Cooperative Method of Channelization and Ramp Metering},
+  author={Deng, Diantao and Yu, Bo and Xu, Duo and Chen, Yuren and Kong, You and others},
+  journal={Journal of Advanced Transportation},
+  volume={2023},
+  publisher={Hindawi}
+}

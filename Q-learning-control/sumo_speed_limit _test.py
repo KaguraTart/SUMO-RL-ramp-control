@@ -15,7 +15,7 @@ from sumolib import checkBinary
 
 #-----引入地址------
 sumo_path = "F:\\software two\\sumo-1.10.0"
-project_path =  "F:\大学\MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control\Q-learning-control"
+project_path =  "Q-learning-control"
 # cfg_path = "F:\sumo_pro/traci_main\main\zhangshijie.sumo.cfg"
 cfg_path = "Q-learning-control/test1.sumo.cfg"
 #----------------------------------------#
@@ -128,7 +128,7 @@ def output_lane_speed():   #输出01234道路的平均速度
             car_index.append(i/60)
     car_simple_speed = {'H_0':car_simple1,'H_1':car_simple2,'H_2':car_simple3,'H_3':car_simple4,'H_4':car_simple5 }
     car_simple_speed = pd.DataFrame(data = car_simple_speed,index = car_index)
-    car_simple_speed.to_csv(r'F:/大学/MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control/Q-learning-control/csv/'+T1+'.csv')
+    car_simple_speed.to_csv(r'SUMO-RL-ramp-control/Q-learning-control/csv/'+T1+'.csv')
     ax = car_simple_speed[['H_0', 'H_1','H_2','H_3','H_4']].plot(fontsize =30)
     plt.title(T1,fontsize = 30)
     fig = ax.get_figure()
@@ -136,7 +136,7 @@ def output_lane_speed():   #输出01234道路的平均速度
     plt.ylabel('speed km/h',fontsize = 30)
     plt.legend(fontsize = 20)
     plt.show()
-    fig.savefig(r'F:/大学/MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control/Q-learning-control/img/'   + T1+'.png')
+    fig.savefig(r'SUMO-RL-ramp-control/Q-learning-control/img/'   + T1+'.png')
     
     bplot1 = car_simple_speed[['H_0', 'H_1','H_2','H_3','H_4']].boxplot(fontsize=30)
     
@@ -159,7 +159,7 @@ def output_lane_speed():   #输出01234道路的平均速度
     plt.ylabel('speed km/h',fontsize = 30)
     plt.legend(fontsize = 20)
     plt.show()
-    fig.savefig(r'F:/大学/MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control/Q-learning-control/img/'   + T2+'.png')
+    fig.savefig(r'SUMO-RL-ramp-control/Q-learning-control/img/'   + T2+'.png')
 
 def output_lane_OOC(): #画图
     get_OOC = {'H_0':get_OOC0_list,
@@ -184,7 +184,7 @@ def output_lane_OOC(): #画图
             car_OOC_index.append(i/60)
     car_simple_OOC = {'H_0':car_OOC_simple1,'H_1':car_OOC_simple2,'H_2':car_OOC_simple3,'H_3':car_OOC_simple4,'H_4':car_OOC_simple5 ,'H_all':car_OOC_simpleall}
     car_simple_OOC = pd.DataFrame(data = car_simple_OOC,index = car_OOC_index)
-    car_simple_OOC.to_csv(r'F:/大学/MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control/Q-learning-control/csv/'+T3+'.csv')
+    car_simple_OOC.to_csv(r'SUMO-RL-ramp-control/Q-learning-control/csv/'+T3+'.csv')
     ax = car_simple_OOC[['H_0', 'H_1','H_2','H_3','H_4']].plot(fontsize =30)
     car_simple_OOC[['H_0', 'H_1','H_2','H_3','H_4']].to_csv()
     plt.title(T3,fontsize = 30)
@@ -193,7 +193,7 @@ def output_lane_OOC(): #画图
     plt.ylabel('%',fontsize = 30)
     plt.legend(fontsize = 30)
     plt.show()
-    fig.savefig(r'F:/大学/MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control/Q-learning-control/img/'   +T3+ '.png')
+    fig.savefig(r'SUMO-RL-ramp-control/Q-learning-control/img/'   +T3+ '.png')
     
     
     
@@ -206,7 +206,7 @@ def output_lane_OOC(): #画图
     plt.ylabel('speed distribution(km/h)',fontsize = 30)
     plt.title('the Lanes OCC box plots for limit speed',fontsize = 35)
     plt.show()
-    fig.savefig(r'F:/大学/MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control/Q-learning-control/img/'   + T3+'_box.png')
+    fig.savefig(r'SUMO-RL-ramp-control/Q-learning-control/img/'   + T3+'_box.png')
 
     ax = car_simple_OOC[['H_all']].plot(fontsize =30)
     plt.title(T4,fontsize = 30)
@@ -215,7 +215,7 @@ def output_lane_OOC(): #画图
     plt.ylabel('%',fontsize = 30)
     plt.legend(fontsize = 20)
     plt.show()
-    fig.savefig(r'F:/大学/MTFwiki\SUMO-Q_learning\SUMO-RL-ramp-control/Q-learning-control/img/'   + T4+'.png')
+    fig.savefig(r'SUMO-RL-ramp-control/Q-learning-control/img/'   + T4+'.png')
 
 #traci控制
 def traci_control(step_time):

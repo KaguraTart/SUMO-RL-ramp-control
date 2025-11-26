@@ -12,7 +12,10 @@
 
 我们已经有了基于上述的进一步研究，如需了解，请参考下面的我们已经发表的论文。
 We have already conducted further research based on the above. To learn more, please refer to our published papers below.
-'''
+
+
+
+```
 @article{deng2023automated,
   title={Automated Traffic State Optimization in the Weaving Area of Urban Expressways by a Reinforcement Learning-Based Cooperative Method of Channelization and Ramp Metering},
   author={Deng, Diantao and Yu, Bo and Xu, Duo and Chen, Yuren and Kong, You and others},
@@ -20,4 +23,6 @@ We have already conducted further research based on the above. To learn more, pl
   volume={2023},
   publisher={Hindawi}
 }
-'''
+```
+
+
